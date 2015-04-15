@@ -43,7 +43,7 @@ public class GcmIntentService extends IntentService {
             } else if (GoogleCloudMessaging.MESSAGE_TYPE_MESSAGE
                     .equals(messageType)) {
                 // This loop represents the service doing some work.
-                for (int i = 0; i < 5; i++) {
+               /* for (int i = 0; i < 5; i++) {
                     Log.d(TAG, " Working... " + (i + 1) + "/5 @ "
                             + SystemClock.elapsedRealtime());
                     try {
@@ -51,7 +51,7 @@ public class GcmIntentService extends IntentService {
                     } catch (InterruptedException e) {
                     }
                 }
-                Log.i(TAG, "Completed work @ " + SystemClock.elapsedRealtime());
+                Log.i(TAG, "Completed work @ " + SystemClock.elapsedRealtime());*/
                 sendNotification(extras.getString("message"));
             }
         }        // Release the wake lock provided by the WakefulBroadcastReceiver.
